@@ -61,7 +61,7 @@ def check_ptt():
 
             # 定義 3 種你要的目標組合 (都必須包含「賣」)
             cond1 = ("iphone" in title_lower) and ("13" in title_lower) and ("pro" in title_lower)
-            cond2 = ("iphone" in title_lower) and ("15" in title_lower) and ("pro" in title_lower)
+            cond2 = ("iphone" in title_lower) and ("15" in title_lower)
             cond3 = ("ipad" in title_lower) and (("11" in title_lower) or ("a16" in title_lower))
 
             # 只要符合其中一種組合 (Condition 1 OR Condition 2 OR Condition 3)
