@@ -59,14 +59,10 @@ def check_ptt():
             article_url = "https://www.ptt.cc" + title_div.a["href"]
             title_lower = title.lower()
 
-            # 基本排除條件：排除已售出、徵/買文章
-            if "售出" in title_lower or "[徵" in title_lower or "[買" in title_lower:
-                continue
-
             # 定義 3 種你要的目標組合 (都必須包含「賣」)
             cond1 = ("iphone" in title_lower) and ("13" in title_lower) and ("pro" in title_lower)
             cond2 = ("iphone" in title_lower) and ("15" in title_lower) and ("pro" in title_lower)
-            cond3 = ("ipad" in title_lower)
+            cond3 = ("ipad" in title_lower) and (("11" in title_lower) or ("a16" in title_lower))
 
             # 只要符合其中一種組合 (Condition 1 OR Condition 2 OR Condition 3)
             if cond1 or cond2 or cond3:
